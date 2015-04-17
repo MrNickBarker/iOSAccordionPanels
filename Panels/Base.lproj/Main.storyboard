@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAC-wZ-Bcs">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DfK-Dr-rb8"/>
+                                    <barButtonItem title="Add Panel" id="gD0-rk-hYo">
+                                        <connections>
+                                            <action selector="tappedAddPanel:" destination="BYZ-38-t0r" id="pAE-5G-Yuu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="F1J-QG-VXf"/>
+                                    <barButtonItem title="Remove Panel" id="LXP-fp-dlm">
+                                        <connections>
+                                            <action selector="tappedRemovePanel:" destination="BYZ-38-t0r" id="Vig-U2-zmn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5Oa-Oa-zMv"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JrV-YM-p3u" userLabel="Panels Container">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SAC-wZ-Bcs" secondAttribute="trailing" id="6YJ-3v-NRX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SAC-wZ-Bcs" secondAttribute="bottom" id="BNy-bY-d4S"/>
+                            <constraint firstItem="SAC-wZ-Bcs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hux-ys-RZ9"/>
+                            <constraint firstItem="JrV-YM-p3u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Qrw-aS-XKA"/>
+                            <constraint firstItem="JrV-YM-p3u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TDH-XL-gpc"/>
+                            <constraint firstAttribute="trailing" secondItem="JrV-YM-p3u" secondAttribute="trailing" id="qEs-5b-UfI"/>
+                            <constraint firstItem="SAC-wZ-Bcs" firstAttribute="top" secondItem="JrV-YM-p3u" secondAttribute="bottom" id="wfE-Q9-NDW"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="panelsContainer" destination="JrV-YM-p3u" id="Zrn-c0-ohy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
